@@ -1,0 +1,37 @@
+#include <iostream>
+using namespace std;
+
+class Car {
+    string brand;
+    float price;
+
+public:
+    void input() {
+        cout << "Enter car brand: ";
+        cin >> brand;
+        cout << "Enter car price: ";
+        cin >> price;
+    }
+
+    void display() {
+        cout << "Brand: " << brand << ", Price: " << price << endl;
+    }
+};
+
+int main() {
+    int n;
+    cout << "Enter number of cars: ";
+    cin >> n;
+
+    Car c[n];
+    for (int i = 0; i < n; i++) {
+        cout << "\nEnter details of car " << i + 1 << endl;
+        c[i].input();
+    }
+
+    cout << "\nCar Details:\n";
+    for (int i = 0; i < n; i++)
+        c[i].display();
+
+    return 0;
+}
